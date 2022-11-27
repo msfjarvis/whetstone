@@ -9,6 +9,8 @@ anvil {
     generateDaggerFactories.set(true)
 }
 
+android { namespace = "com.deliveryhero.whetstone" }
+
 dependencies {
     api(libs.dagger)
 

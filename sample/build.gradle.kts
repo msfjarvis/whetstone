@@ -15,6 +15,7 @@ android {
         versionName = "1.0"
         applicationId = "com.deliveryhero.whetstone.sample"
     }
+    namespace = "com.deliveryhero.whetstone.sample"
     buildFeatures.compose = true
     buildFeatures.viewBinding = true
     composeOptions.kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
