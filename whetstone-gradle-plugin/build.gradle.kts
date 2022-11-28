@@ -26,7 +26,7 @@ tasks.compileKotlin {
 gradlePlugin {
     plugins {
         create("whetstone") {
-            id = "com.deliveryhero.whetstone"
+            id = "dev.msfjarvis.whetstone"
             implementationClass = "com.deliveryhero.whetstone.gradle.WhetstonePlugin"
         }
     }
