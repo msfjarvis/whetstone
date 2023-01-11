@@ -8,6 +8,10 @@ pluginManagement {
             forRepository { maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
             filter { includeGroup("com.squareup.anvil") }
         }
+        exclusiveContent {
+            forRepository { maven("https://oss.sonatype.org/content/repositories/snapshots/") }
+            filter { includeGroup("dev.msfjarvis.whetstone") }
+        }
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -20,6 +24,10 @@ dependencyResolutionManagement {
         exclusiveContent {
             forRepository { maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
             filter { includeGroup("com.squareup.anvil") }
+        }
+        exclusiveContent {
+            forRepository { maven("https://oss.sonatype.org/content/repositories/snapshots/") }
+            filter { includeGroup("dev.msfjarvis.whetstone") }
         }
         google()
         mavenCentral()

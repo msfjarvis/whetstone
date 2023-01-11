@@ -1,4 +1,5 @@
 import java.util.*
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
@@ -17,9 +18,9 @@ java {
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-tasks.compileKotlin {
+tasks.withType<KotlinCompile>().configureEach {
     dependsOn(generateBuildConfig)
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
     kotlinOptions.freeCompilerArgs += "-Xexplicit-api=strict"
 }
 

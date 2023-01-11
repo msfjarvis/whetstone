@@ -1,7 +1,8 @@
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    kotlin("jvm")
-    kotlin("kapt")
-    id("com.vanniktech.maven.publish")
+    alias(libs.plugins.kotlinJvm)
+    alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.mavenPublish)
 }
 
 dependencies {
