@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    "helpers:pinGitHubActionDigests",
+    "github>msfjarvis/shared-workflows//renovate/automerge"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "^kotlin",
+        "^org.jetbrains.kotlin",
+        "^androidx.compose.compiler"
+      ],
+      "groupName": "kotlin"
+    },
+    {
+      "matchDatasources": [
+        "maven"
+      ],
+      "matchPackageNames": [
+        "androidx.compose.compiler:compiler"
+      ],
+      "registryUrls": [
+        "https://maven.google.com/"
+      ]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "gradle/libs.versions.toml"
+      ],
+      "matchStrings": [
+        "androidxComposeCompiler = \"(?<currentValue>.*)\""
+      ],
+      "datasourceTemplate": "maven",
+      "depNameTemplate": "androidx.compose.compiler:compiler"
+    }
+  ]
+}
