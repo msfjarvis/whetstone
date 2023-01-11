@@ -14,6 +14,11 @@
       ],
       "groupName": "kotlin"
     },
+    // We require a Kotlin 1.8.0 compatible Anvil release to happen first
+    {
+      "matchPackageNames": ["org.jetbrains.kotlin:kotlin-gradle-plugin"],
+      "allowedVersions": "<=1.7.21"
+    },
     {
       "matchDatasources": [
         "maven"
