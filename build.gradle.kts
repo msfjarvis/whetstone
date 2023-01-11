@@ -60,7 +60,7 @@ fun BaseExtension.configureExtension() {
 
 
 plugins {
-    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.11.1"
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.12.1"
 }
 
 apiValidation {
