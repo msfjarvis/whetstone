@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout latest code
-        uses: actions/checkout@dc323e67f16fb5f7663d20ff7941f27f5809e9b6 # v2
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
       - name: Set JDK version
         uses: actions/setup-java@1df8dbefe2a8cbc99770194893dd902763bee34b # v3
         with:
