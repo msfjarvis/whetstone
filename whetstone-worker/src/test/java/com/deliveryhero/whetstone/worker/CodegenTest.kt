@@ -1,5 +1,7 @@
+@file:OptIn(ExperimentalAnvilApi::class)
 package com.deliveryhero.whetstone.worker
 
+import com.squareup.anvil.annotations.ExperimentalAnvilApi
 import com.squareup.anvil.compiler.internal.testing.compileAnvil
 import com.tschuchort.compiletesting.KotlinCompilation
 import org.junit.Test

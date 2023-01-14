@@ -1,7 +1,9 @@
+@file:OptIn(ExperimentalAnvilApi::class)
 package com.deliveryhero.whetstone.codegen
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
+import com.squareup.anvil.annotations.ExperimentalAnvilApi
 import com.deliveryhero.whetstone.activity.ActivityScope
 import com.deliveryhero.whetstone.app.ApplicationScope
 import com.deliveryhero.whetstone.fragment.FragmentScope
