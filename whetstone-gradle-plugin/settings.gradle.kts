@@ -5,10 +5,6 @@ rootProject.name = "whetstone-gradle-plugin"
 pluginManagement {
     repositories {
         exclusiveContent {
-            forRepository { maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
-            filter { includeGroup("com.squareup.anvil") }
-        }
-        exclusiveContent {
             forRepository { maven("https://oss.sonatype.org/content/repositories/snapshots/") }
             filter { includeGroup("dev.msfjarvis.whetstone") }
         }
@@ -21,10 +17,6 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        exclusiveContent {
-            forRepository { maven("https://s01.oss.sonatype.org/content/repositories/snapshots/") }
-            filter { includeGroup("com.squareup.anvil") }
-        }
         exclusiveContent {
             forRepository { maven("https://oss.sonatype.org/content/repositories/snapshots/") }
             filter { includeGroup("dev.msfjarvis.whetstone") }
