@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalCompilerApi::class)
+
 package com.deliveryhero.whetstone.codegen
 
 import com.deliveryhero.whetstone.SingleIn
@@ -21,6 +23,7 @@ import kotlin.reflect.KClass
 import kotlin.reflect.full.*
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 
 internal fun KotlinCompilation.Result.validateInstanceBinding(
     classUnderTest: String,
