@@ -112,7 +112,7 @@ public final class com/deliveryhero/whetstone/Whetstone {
 	public final fun inject (Landroid/app/Application;)V
 	public final fun inject (Landroid/app/Service;)V
 	public final fun inject (Landroid/view/View;)V
-	public final fun inject (Landroidx/fragment/app/FragmentActivity;)V
+	public final fun inject (Landroidx/activity/ComponentActivity;)V
 }
 
 public abstract interface class com/deliveryhero/whetstone/activity/ActivityComponent {
@@ -129,6 +129,7 @@ public abstract interface class com/deliveryhero/whetstone/activity/ActivityComp
 }
 
 public abstract interface class com/deliveryhero/whetstone/activity/ActivityModule {
+	public abstract fun bindContext (Landroid/app/Activity;)Landroid/content/Context;
 	public abstract fun membersInjectors ()Ljava/util/Map;
 }
 
