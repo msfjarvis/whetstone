@@ -14,8 +14,9 @@ loadParentProperties()
 pluginManager.apply(com.vanniktech.maven.publish.MavenPublishPlugin::class)
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of("11"))
+    }
 }
 
 tasks.withType<KotlinCompile>().configureEach {

@@ -11,6 +11,7 @@ whetstone.addOns {
 }
 
 android {
+    namespace = "com.deliveryhero.whetstone.sample"
     defaultConfig {
         versionCode = 1
         versionName = "1.0"

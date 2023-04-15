@@ -13,10 +13,6 @@ plugins {
     alias(libs.plugins.kotlinBinaryCompatibilityValidator)
 }
 
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}
-
 subprojects {
     afterEvaluate {
         tasks.withType<KotlinCompile> {
@@ -62,4 +58,8 @@ fun BaseExtension.configureExtension() {
 
 apiValidation {
     ignoredProjects.addAll(listOf("sample", "whetstone-compiler"))
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }

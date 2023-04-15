@@ -5,6 +5,12 @@ plugins {
     alias(libs.plugins.mavenPublish)
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of("11"))
+    }
+}
+
 dependencies {
     implementation(libs.anvilCompiler)
     implementation(libs.anvilCompilerUtils)

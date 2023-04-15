@@ -3,10 +3,10 @@ package com.deliveryhero.whetstone.worker
 import com.squareup.anvil.annotations.ExperimentalAnvilApi
 import com.squareup.anvil.compiler.internal.testing.compileAnvil
 import com.tschuchort.compiletesting.KotlinCompilation
+import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 import org.junit.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
-import org.jetbrains.kotlin.compiler.plugin.ExperimentalCompilerApi
 
 @OptIn(ExperimentalAnvilApi::class, ExperimentalCompilerApi::class)
 internal class CodegenTest {
