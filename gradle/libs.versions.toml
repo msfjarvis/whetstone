@@ -10,7 +10,7 @@ androidxLifecycle = "2.6.1"
 androidxWork = "2.8.1"
 anvil = "2.4.4"
 dagger = "2.46.1"
-kotlin = "1.8.10"
+kotlin = "1.8.22"
 kotlinxCoroutines = "1.6.4"
 mavenPublish = "0.25.2"
 truth = "1.1.4"
@@ -21,7 +21,7 @@ anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
 androidApplication = { id = "com.android.application", version.ref = "androidGradle" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradle" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.12.1"
+kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.13.2"
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish"}
