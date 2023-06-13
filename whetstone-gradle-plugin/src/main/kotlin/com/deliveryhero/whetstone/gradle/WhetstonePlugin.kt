@@ -10,6 +10,7 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.*
 
+@SuppressWarnings("rawtypes")
 @AutoService(Plugin::class)
 public class WhetstonePlugin : Plugin<Project> {
 
