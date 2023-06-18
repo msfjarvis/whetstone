@@ -13,7 +13,7 @@ dagger = "2.46.1"
 kotlin = "1.8.10"
 kotlinxCoroutines = "1.6.4"
 mavenPublish = "0.25.2"
-truth = "1.1.4"
+truth = "1.1.5"
 autoService = "1.1.1"
 
 [plugins]
