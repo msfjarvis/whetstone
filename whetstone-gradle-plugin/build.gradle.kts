@@ -1,7 +1,6 @@
 import java.util.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     id("java-library")
     id("java-gradle-plugin")
@@ -13,15 +12,13 @@ plugins {
 loadParentProperties()
 pluginManager.apply(com.vanniktech.maven.publish.MavenPublishPlugin::class)
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of("11"))
-    }
+kotlin.jvmToolchain {
+    languageVersion.set(JavaLanguageVersion.of("17"))
 }
 
 tasks.withType<KotlinCompile>().configureEach {
     dependsOn(generateBuildConfig)
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
     kotlinOptions.freeCompilerArgs += "-Xexplicit-api=strict"
 }
 
