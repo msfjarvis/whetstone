@@ -3,14 +3,14 @@ androidGradle = "8.0.2"
 androidxActivity = "1.7.2"
 androidxAppCompat = "1.6.1"
 androidxCompose = "1.4.3"
-androidxComposeCompiler = "1.4.4"
+androidxComposeCompiler = "1.4.8-dev-k1.9.0-RC-5532d15c918"
 androidxCore = "1.10.1"
 androidxFragment = "1.6.0"
 androidxLifecycle = "2.6.1"
 androidxWork = "2.8.1"
-anvil = "2.4.4"
+anvil = "2.4.6"
 dagger = "2.47"
-kotlin = "1.8.10"
+kotlin = "1.9.0"
 kotlinxCoroutines = "1.6.4"
 mavenPublish = "0.25.3"
 truth = "1.1.5"
@@ -21,11 +21,11 @@ anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
 androidApplication = { id = "com.android.application", version.ref = "androidGradle" }
 androidLibrary = { id = "com.android.library", version.ref = "androidGradle" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.12.1"
+kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.13.0"
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish"}
-whetstone = { id = "dev.msfjarvis.whetstone", version = "0.5.0-SNAPSHOT" }
+whetstone = { id = "dev.msfjarvis.whetstone", version = "0.6.0-SNAPSHOT" }
 
 [libraries]
 androidGradle = { module = "com.android.tools.build:gradle", version.ref = "androidGradle" }

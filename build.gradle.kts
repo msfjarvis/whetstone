@@ -35,6 +35,8 @@ fun KotlinCompile.configureTask() {
             "-Xassertions=jvm",
             "-opt-in=kotlin.RequiresOptIn",
             "-opt-in=com.squareup.anvil.annotations.ExperimentalAnvilApi",
+            "-P",
+            "plugin:androidx.compose.compiler.plugins.kotlin:suppressKotlinVersionCompatibilityCheck=1.9.0",
         )
         if (project.name != "sample") compilerArgs += "-Xexplicit-api=strict"
         freeCompilerArgs = freeCompilerArgs + compilerArgs

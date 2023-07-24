@@ -16,6 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        exclusiveContent {
+            forRepository { maven("https://androidx.dev/storage/compose-compiler/repository") }
+            filter { includeGroup("androidx.compose.compiler") }
+        }
     }
 }
 
