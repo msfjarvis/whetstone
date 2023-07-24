@@ -25,7 +25,7 @@ kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish"}
-whetstone = { id = "dev.msfjarvis.whetstone", version = "0.7.0-SNAPSHOT" }
+whetstone = { id = "dev.msfjarvis.whetstone", version = "0.6.0" }
 
 [libraries]
 androidGradle = { module = "com.android.tools.build:gradle", version.ref = "androidGradle" }
