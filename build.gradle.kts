@@ -18,8 +18,8 @@ subprojects {
             configureTask()
         }
         tasks.withType<JavaCompile> {
-            sourceCompatibility = JavaVersion.VERSION_17.toString()
-            targetCompatibility = JavaVersion.VERSION_17.toString()
+            sourceCompatibility = JavaVersion.VERSION_11.toString()
+            targetCompatibility = JavaVersion.VERSION_11.toString()
         }
         extensions.findByType<BaseExtension>()?.apply {
             configureExtension()
@@ -29,7 +29,7 @@ subprojects {
 
 fun KotlinCompile.configureTask() {
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
 
         val compilerArgs = mutableListOf(
             "-Xassertions=jvm",
@@ -52,8 +52,8 @@ fun BaseExtension.configureExtension() {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 

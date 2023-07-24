@@ -4,9 +4,7 @@ plugins {
     alias(libs.plugins.mavenPublish)
 }
 
-kotlin.jvmToolchain {
-    languageVersion.set(JavaLanguageVersion.of("17"))
-}
+kotlin.jvmToolchain(11)
 
 dependencies {
     implementation(libs.anvilCompiler)

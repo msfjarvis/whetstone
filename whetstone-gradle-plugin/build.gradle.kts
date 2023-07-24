@@ -12,13 +12,11 @@ plugins {
 loadParentProperties()
 pluginManager.apply(com.vanniktech.maven.publish.MavenPublishPlugin::class)
 
-kotlin.jvmToolchain {
-    languageVersion.set(JavaLanguageVersion.of("17"))
-}
+kotlin.jvmToolchain(11)
 
 tasks.withType<KotlinCompile>().configureEach {
     dependsOn(generateBuildConfig)
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
     kotlinOptions.freeCompilerArgs += "-Xexplicit-api=strict"
 }
 
