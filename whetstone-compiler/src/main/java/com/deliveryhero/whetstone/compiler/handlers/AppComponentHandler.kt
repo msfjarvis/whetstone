@@ -60,19 +60,18 @@ internal class AppComponentHandler : CodegenHandler {
             .addSuperinterface(applicationComponentCn.nestedClass("Factory"))
             .addAnnotation(Component.Factory::class)
             .build()
+        val appParam = ParameterSpec.builder("application", APPLICATION.asClassName(module))
+            .build()
         val companionObjectSpec = TypeSpec.companionObjectBuilder("Default")
             .addSuperinterface(generatedComponentCn.nestedClass("Factory"))
             .addFunction(
                 FunSpec.builder("create")
-                    .addParameter(
-                        ParameterSpec.builder("application", APPLICATION.asClassName(module))
-                            .build()
-                    )
+                    .addParameter(appParam)
                     .returns(generatedComponentCn)
                     .addModifiers(KModifier.PUBLIC, KModifier.OVERRIDE)
                     .addCode(CodeBlock.of(
                         "return DaggerGeneratedApplicationComponent.factory().create(%L) as %T",
-                        "application",
+                        appParam.name,
                         generatedComponentCn,
                     ))
                     .build())
