@@ -78,5 +78,4 @@ jobs:
           ORG_GRADLE_PROJECT_mavenCentralUsername : ${{ secrets.SONATYPE_NEXUS_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword : ${{ secrets.SONATYPE_NEXUS_PASSWORD }}
           ORG_GRADLE_PROJECT_signingInMemoryKey : ${{ secrets.NEXUS_PUBLISH_SIGNING_KEY }}
-          ORG_GRADLE_PROJECT_signingInMemoryKeyId : ${{ secrets.NEXUS_PUBLISH_SIGNING_KEY_ID }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword : ${{ secrets.NEXUS_PUBLISH_SIGNING_KEY_PASSWORD }}
