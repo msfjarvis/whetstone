@@ -12,7 +12,7 @@
         "^org.jetbrains.kotlin",
         "^androidx.compose.compiler"
       ],
-      "groupName": "kotlin"
+      "groupName": "Kotlin and Compose"
     },
     {
       "matchPackageNames": [
@@ -20,17 +20,6 @@
       ],
       "enabled": false,
     },
-    {
-      "matchDatasources": [
-        "maven"
-      ],
-      "matchPackageNames": [
-        "androidx.compose.compiler:compiler"
-      ],
-      "registryUrls": [
-        "https://androidx.dev/storage/compose-compiler/repository/"
-      ]
-    }
   ],
   "regexManagers": [
     {
