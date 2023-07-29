@@ -15,6 +15,12 @@
       "groupName": "kotlin"
     },
     {
+      "matchPackageNames": [
+        "anvil",
+      ],
+      "enabled": false,
+    },
+    {
       "matchDatasources": [
         "maven"
       ],
