@@ -1,6 +1,6 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.msfjarvis.whetstone/whetstone/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.msfjarvis.whetstone/whetstone)
+> This is an unofficial fork intended to keep Whetstone up-to-date, due to very lacklustre maintenance on Delivery Hero's part. You are free to file issues here if you run into problems and I'll usually try to fix them.
 
-# Whetstone
+# Whetstone [![Maven Central](https://maven-badges.herokuapp.com/maven-central/dev.msfjarvis.whetstone/whetstone/badge.svg)](https://maven-badges.herokuapp.com/maven-central/dev.msfjarvis.whetstone/whetstone)
 
 > "An Anvil forges a Dagger. A Whetstone sharpens it. And when you're not planning on using your Dagger, you may keep it in something that rhymes with kilt." — [Tiago Cunha](https://github.com/laggedHero).
 
@@ -26,7 +26,7 @@ First you must apply whetstone plugin in the `build.gradle` file of any module t
 
 ```kotlin
 plugins {
-    id("com.deliveryhero.whetstone").version("<latest version>")
+    id("dev.msfjarvis.whetstone").version("<latest version>")
 }
 ```
 
@@ -39,12 +39,12 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath("com.deliveryhero.whetstone:whetstone-gradle-plugin:${latest_version}")
+    classpath("dev.msfjarvis.whetstone:whetstone-gradle-plugin:${latest_version}")
   }
 }
 
 // In individual modules
-apply(plugin = "com.deliveryhero.whetstone")
+apply(plugin = "dev.msfjarvis.whetstone")
 ```
 
 This automatically configures Dagger and Anvil, and also adds the necessary whetstone dependencies for you.
