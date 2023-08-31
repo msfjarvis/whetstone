@@ -16,16 +16,10 @@ public class WhetstonePlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         val extension = target.extensions.create<WhetstoneExtension>(WHETSTONE_EXTENSION)
+        extension.useKsp.convention(false)
         target.plugins.apply(ANVIL_PLUGIN_ID)
         target.plugins.withType<AndroidBasePlugin> {
             target.configureAnvil(extension)
-        }
-        if (target.isAppModule) {
-            target.pluginManager.apply(KAPT_PLUGIN_ID)
-            target.dependencies.add(
-                "kapt",
-                "com.google.dagger:dagger-compiler:${BuildConfig.DAGGER_VERSION}"
-            )
         }
         target.afterEvaluate {
             if (!target.plugins.hasPlugin(AndroidBasePlugin::class)) {
@@ -60,6 +54,12 @@ public class WhetstonePlugin : Plugin<Project> {
             useLocal -> project(":$moduleId")
             else -> "${BuildConfig.GROUP}:$moduleId:${BuildConfig.VERSION}"
         }
+        if (isAppModule) {
+            dependencies.add(
+                if (extension.useKsp.get()) "ksp" else "kapt",
+                "com.google.dagger:dagger-compiler:${BuildConfig.DAGGER_VERSION}"
+            )
+        }
 
         fun DependencyHandlerScope.anvil(moduleId: String) = add("anvil", dependency(moduleId))
         fun DependencyHandlerScope.implementation(moduleId: String) = add("implementation", dependency(moduleId))
@@ -76,6 +76,5 @@ public class WhetstonePlugin : Plugin<Project> {
     private companion object {
         const val ANVIL_PLUGIN_ID = "com.squareup.anvil"
         const val WHETSTONE_EXTENSION = "whetstone"
-        const val KAPT_PLUGIN_ID = "kotlin-kapt"
     }
 }
