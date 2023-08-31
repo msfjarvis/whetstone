@@ -7,10 +7,21 @@
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "^kotlin",
-        "^org.jetbrains.kotlin",
-        "^androidx.compose.compiler"
+      matchDatasources: [
+        "maven"
+      ],
+      registryUrls: [
+        "https://repo1.maven.org/maven2",
+        "https://plugins.gradle.org/m2/",
+        "https://maven.google.com/",
+      ],
+    },
+    {
+      "matchPackageNames": [
+        "androidx.compose.compiler:compiler",
+        "org.jetbrains.kotlin.android",
+        "org.jetbrains.kotlin.jvm",
+        "org.jetbrains.kotlin.kapt",
       ],
       "groupName": "Kotlin and Compose"
     },
