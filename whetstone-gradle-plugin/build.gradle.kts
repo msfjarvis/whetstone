@@ -45,8 +45,9 @@ val generateBuildConfig by tasks.registering(GenerateBuildConfigTask::class) {
     )
     properties.set(props)
     generatedSourceDir.set(layout.buildDirectory.dir("generated/wgp/kotlin/main"))
-    sourceSets.main.get().java.srcDir(generatedSourceDir)
 }
+
+sourceSets.main.configure { java.srcDir(generateBuildConfig) }
 
 abstract class GenerateBuildConfigTask : DefaultTask() {
     @get:Input
