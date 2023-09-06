@@ -37,13 +37,6 @@ public abstract class WhetstoneExtension @Inject constructor(objects: ObjectFact
      */
     public abstract val syncGeneratedSources: Property<Boolean>
 
-    /***
-     * Use KSP instead of KAPT for the Dagger compiler. Requires Dagger 2.48+
-     *
-     * NOTE: Dagger's KSP support is currently in alpha and subject to breaking changes.
-     */
-    public abstract val useKsp: Property<Boolean>
-
     /**
      * Allows configuring extra Whetstone add-ons.
      *
