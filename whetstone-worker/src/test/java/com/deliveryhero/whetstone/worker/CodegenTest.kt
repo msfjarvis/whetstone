@@ -18,9 +18,9 @@ internal class CodegenTest {
                 import android.content.Context
                 import androidx.work.Worker
                 import androidx.work.WorkerParameters
-                import com.deliveryhero.whetstone.ForScope
                 import com.deliveryhero.whetstone.worker.ContributesWorker
                 import com.deliveryhero.whetstone.worker.WorkerScope
+                import com.squareup.anvil.annotations.optional.ForScope
                 import javax.inject.Inject
 
                 @ContributesWorker

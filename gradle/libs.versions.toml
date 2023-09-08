@@ -43,6 +43,7 @@ androidxLifecycleViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-
 androidxLifecycleViewModelCompose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
 androidxWorkRuntime = { module = "androidx.work:work-runtime-ktx", version.ref = "androidxWork" }
 anvilAnnotations = { module = "com.squareup.anvil:annotations", version.ref = "anvil" }
+anvilAnnotationsOptional = { module = "com.squareup.anvil:annotations-optional", version.ref = "anvil" }
 anvilCompiler = { module = "com.squareup.anvil:compiler-api", version.ref = "anvil" }
 anvilCompilerUtils = { module = "com.squareup.anvil:compiler-utils", version.ref = "anvil" }
 anvilGradle = { module = "com.squareup.anvil:gradle-plugin", version.ref = "anvil" }
