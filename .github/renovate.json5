@@ -26,10 +26,10 @@
       "groupName": "Kotlin and Compose"
     },
     {
-      "matchPackageNames": [
-        "anvil",
+      "matchPackagePatterns": [
+        "^com.squareup.anvil"
       ],
-      "enabled": false,
+      "allowedVersions": "!/.*-1-8$/",
     },
   ],
   "regexManagers": [
