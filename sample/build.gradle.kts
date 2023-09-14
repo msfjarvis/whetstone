@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.whetstone)
+    alias(libs.plugins.kotlinKapt)
 }
 
 whetstone.addOns {
@@ -23,6 +24,8 @@ android {
 }
 
 dependencies {
+    kapt(libs.daggerCompiler)
+
     implementation(libs.androidxActivity)
     implementation(libs.androidxCore)
     implementation(libs.androidxAppCompat)
