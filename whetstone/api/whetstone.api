@@ -28,6 +28,16 @@ public final class anvil/hint/merge/com/deliveryhero/whetstone/app/ApplicationMo
 	public static final fun getCom_deliveryhero_whetstone_app_ApplicationModule_scope0 ()Lkotlin/reflect/KClass;
 }
 
+public final class anvil/hint/merge/com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent_ParentComponentKt {
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverComponent_ParentComponent_reference ()Lkotlin/reflect/KClass;
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverComponent_ParentComponent_scope0 ()Lkotlin/reflect/KClass;
+}
+
+public final class anvil/hint/merge/com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverModuleKt {
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverModule_reference ()Lkotlin/reflect/KClass;
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverModule_scope0 ()Lkotlin/reflect/KClass;
+}
+
 public final class anvil/hint/merge/com/deliveryhero/whetstone/fragment/FragmentComponent_ParentComponentKt {
 	public static final fun getCom_deliveryhero_whetstone_fragment_FragmentComponent_ParentComponent_reference ()Lkotlin/reflect/KClass;
 	public static final fun getCom_deliveryhero_whetstone_fragment_FragmentComponent_ParentComponent_scope0 ()Lkotlin/reflect/KClass;
@@ -73,6 +83,11 @@ public final class anvil/hint/subcomponent/com/deliveryhero/whetstone/activity/A
 	public static final fun getCom_deliveryhero_whetstone_activity_ActivityComponent_scope ()Lkotlin/reflect/KClass;
 }
 
+public final class anvil/hint/subcomponent/com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponentKt {
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverComponent_reference ()Lkotlin/reflect/KClass;
+	public static final fun getCom_deliveryhero_whetstone_broadcastreceiver_BroadcastReceiverComponent_scope ()Lkotlin/reflect/KClass;
+}
+
 public final class anvil/hint/subcomponent/com/deliveryhero/whetstone/fragment/FragmentComponentKt {
 	public static final fun getCom_deliveryhero_whetstone_fragment_FragmentComponent_reference ()Lkotlin/reflect/KClass;
 	public static final fun getCom_deliveryhero_whetstone_fragment_FragmentComponent_scope ()Lkotlin/reflect/KClass;
@@ -104,6 +119,7 @@ public final class com/deliveryhero/whetstone/Whetstone {
 	public final fun inject (Landroid/app/Activity;)V
 	public final fun inject (Landroid/app/Application;)V
 	public final fun inject (Landroid/app/Service;)V
+	public final fun inject (Landroid/content/BroadcastReceiver;Landroid/content/Context;)V
 	public final fun inject (Landroid/view/View;)V
 }
 
@@ -184,6 +200,28 @@ public abstract interface annotation class com/deliveryhero/whetstone/app/Contri
 	public abstract fun generateAppComponent ()Z
 }
 
+public abstract interface class com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent {
+	public abstract fun getMembersInjectorMap ()Ljava/util/Map;
+}
+
+public abstract interface class com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent$Factory {
+	public abstract fun create (Landroid/content/BroadcastReceiver;)Lcom/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent;
+}
+
+public abstract interface class com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent$ParentComponent {
+	public abstract fun getBroadcastReceiverFactory ()Lcom/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverComponent$Factory;
+}
+
+public abstract interface class com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverModule {
+	public abstract fun membersInjectors ()Ljava/util/Map;
+}
+
+public final class com/deliveryhero/whetstone/broadcastreceiver/BroadcastReceiverScope {
+}
+
+public abstract interface annotation class com/deliveryhero/whetstone/broadcastreceiver/ContributesBroadcastReceiverInjector : java/lang/annotation/Annotation {
+}
+
 public abstract interface class com/deliveryhero/whetstone/event/ComponentInjectionListener {
 	public abstract fun onInjectFinish (Lcom/deliveryhero/whetstone/event/InjectedComponent;)V
 	public abstract fun onInjectStart (Lcom/deliveryhero/whetstone/event/InjectedComponent;)V
@@ -206,6 +244,11 @@ public final class com/deliveryhero/whetstone/event/InjectedComponent$Activity :
 public final class com/deliveryhero/whetstone/event/InjectedComponent$Application : com/deliveryhero/whetstone/event/InjectedComponent {
 	public fun <init> (Landroid/app/Application;)V
 	public final fun getApp ()Landroid/app/Application;
+}
+
+public final class com/deliveryhero/whetstone/event/InjectedComponent$BroadcastReceiver : com/deliveryhero/whetstone/event/InjectedComponent {
+	public fun <init> (Landroid/content/BroadcastReceiver;)V
+	public final fun getReceiver ()Landroid/content/BroadcastReceiver;
 }
 
 public final class com/deliveryhero/whetstone/event/InjectedComponent$Service : com/deliveryhero/whetstone/event/InjectedComponent {

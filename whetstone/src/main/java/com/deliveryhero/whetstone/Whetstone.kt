@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.Application
 import android.app.Service
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
 import androidx.activity.ComponentActivity
@@ -16,6 +18,7 @@ import com.deliveryhero.whetstone.activity.ContributesActivityInjector
 import com.deliveryhero.whetstone.app.ApplicationComponent
 import com.deliveryhero.whetstone.app.ApplicationComponentOwner
 import com.deliveryhero.whetstone.app.ContributesAppInjector
+import com.deliveryhero.whetstone.broadcastreceiver.BroadcastReceiverComponent
 import com.deliveryhero.whetstone.fragment.ContributesFragment
 import com.deliveryhero.whetstone.event.GlobalAndroidComponentListener
 import com.deliveryhero.whetstone.event.InjectedComponent
@@ -176,6 +179,21 @@ public object Whetstone {
         requireNotNull(injector).injectMembers(view)
         GlobalAndroidComponentListener.componentInjectionListener
             ?.onInjectFinish(InjectedComponent.View(view))
+    }
+
+    public fun inject(receiver: BroadcastReceiver, context: Context) {
+        val application = context.applicationContext as Application
+        GlobalAndroidComponentListener.componentInjectionListener
+            ?.onInjectStart(InjectedComponent.BroadcastReceiver(receiver))
+        val injector =
+            fromApplication<BroadcastReceiverComponent.ParentComponent>(application)
+                .getBroadcastReceiverFactory()
+                .create(receiver)
+                .membersInjectorMap[receiver.javaClass] as? MembersInjector<BroadcastReceiver>
+        requireNotNull(injector).injectMembers(receiver)
+        GlobalAndroidComponentListener.componentInjectionListener
+            ?.onInjectFinish(InjectedComponent.BroadcastReceiver(receiver))
+
     }
 
     /**

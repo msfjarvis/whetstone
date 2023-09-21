@@ -5,4 +5,5 @@ public sealed class InjectedComponent {
     public class Service(public val service: android.app.Service) : InjectedComponent()
     public class View(public val view: android.view.View) : InjectedComponent()
     public class Application(public val app: android.app.Application) : InjectedComponent()
+    public class BroadcastReceiver(public val receiver: android.content.BroadcastReceiver) : InjectedComponent()
 }
