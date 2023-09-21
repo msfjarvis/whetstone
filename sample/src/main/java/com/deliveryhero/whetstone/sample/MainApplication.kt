@@ -5,6 +5,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.NotificationManager.IMPORTANCE_DEFAULT
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.util.Log
 import com.deliveryhero.whetstone.Whetstone
@@ -26,6 +27,7 @@ public class MainApplication : Application(), ApplicationComponentOwner {
         super.onCreate()
         Log.d("App", dependency.getMessage("Application"))
         registerNotificationChannel()
+        sendBroadcast(Intent(this, MainBroadcastReceiver::class.java))
     }
 
     private fun registerNotificationChannel() {

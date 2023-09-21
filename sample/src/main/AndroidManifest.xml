@@ -21,6 +21,7 @@
         </activity>
         <service android:name=".MainService" />
         <activity android:name=".BasicActivity"/>
+        <receiver android:name=".MainBroadcastReceiver" android:exported="true"/>
     </application>
 
 </manifest>
