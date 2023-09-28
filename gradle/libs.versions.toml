@@ -1,5 +1,5 @@
 [versions]
-androidGradle = "8.1.1"
+androidGradle = "8.1.2"
 androidxActivity = "1.7.2"
 androidxAppCompat = "1.6.1"
 androidxCompose = "1.5.2"
