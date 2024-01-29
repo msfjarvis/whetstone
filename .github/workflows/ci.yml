@@ -29,7 +29,7 @@ jobs:
           java-version: 17
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@4a8703fa348fe99fdb9d2ac233732f7dccea5437 # v3
+        uses: gradle/gradle-build-action@d4bd442194a6478e8ac205108cae29e76bf9b787 # v3
 
       - name: Check public API
         run: ./gradlew apiCheck
@@ -70,7 +70,7 @@ jobs:
           java-version: 17
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@4a8703fa348fe99fdb9d2ac233732f7dccea5437 # v3
+        uses: gradle/gradle-build-action@d4bd442194a6478e8ac205108cae29e76bf9b787 # v3
 
       - name: Publish artifact
         run: ./gradlew -x test -x lint publish :whetstone-gradle-plugin:publish
