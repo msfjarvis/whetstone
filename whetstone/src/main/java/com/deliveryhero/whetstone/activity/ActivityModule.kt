@@ -15,7 +15,7 @@ public interface ActivityModule {
 
     @Binds
     @ForScope(ActivityScope::class)
-    public fun Activity.bindContext(): Context
+    public fun bindContext(activity: Activity): Context
 
     @Multibinds
     public fun membersInjectors(): MembersInjectorMap
