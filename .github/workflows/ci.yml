@@ -29,7 +29,7 @@ jobs:
           java-version: 17
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@4c39dd82cd5e1ec7c6fa0173bb41b4b6bb3b86ff # v3
+        uses: gradle/actions/setup-gradle@db19848a5fa7950289d3668fb053140cf3028d43 # v3
 
       - name: Check public API
         run: ./gradlew apiCheck
@@ -46,6 +46,9 @@ jobs:
         with:
           distribution: zulu
           java-version: 17
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@db19848a5fa7950289d3668fb053140cf3028d43 # v3
 
       - name: Run unit tests
         run: ./gradlew -x sample:testDebugUnitTest whetstone-compiler:test testDebugUnitTest
@@ -70,7 +73,7 @@ jobs:
           java-version: 17
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@4c39dd82cd5e1ec7c6fa0173bb41b4b6bb3b86ff # v3
+        uses: gradle/actions/setup-gradle@db19848a5fa7950289d3668fb053140cf3028d43 # v3
 
       - name: Publish artifact
         run: ./gradlew -x test -x lint publish :whetstone-gradle-plugin:publish
