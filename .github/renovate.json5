@@ -17,7 +17,7 @@
       ],
     },
     {
-      "matchPackageNames": [
+      "matchDepNames": [
         "androidx.compose.compiler:compiler",
         "org.jetbrains.kotlin.android",
         "org.jetbrains.kotlin.jvm",
