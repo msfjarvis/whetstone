@@ -2,7 +2,7 @@
 androidGradle = "8.4.0"
 androidxActivity = "1.9.0"
 androidxAppCompat = "1.6.1"
-androidxCompose = "1.6.7"
+androidxCompose = "1.6.8"
 androidxComposeCompiler = "1.5.14"
 androidxCore = "1.13.1"
 androidxFragment = "1.7.1"
