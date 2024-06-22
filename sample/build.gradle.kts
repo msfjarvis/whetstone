@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.whetstone)
     alias(libs.plugins.kotlinKapt)
+    alias(libs.plugins.kotlinComposeCompiler)
 }
 
 whetstone.addOns {
@@ -20,7 +21,6 @@ android {
     namespace = "com.deliveryhero.whetstone.sample"
     buildFeatures.compose = true
     buildFeatures.viewBinding = true
-    composeOptions.kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
 }
 
 dependencies {

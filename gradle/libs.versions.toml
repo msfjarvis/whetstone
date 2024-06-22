@@ -3,14 +3,13 @@ androidGradle = "8.5.0"
 androidxActivity = "1.9.0"
 androidxAppCompat = "1.7.0"
 androidxCompose = "1.6.8"
-androidxComposeCompiler = "1.5.14"
 androidxCore = "1.13.1"
 androidxFragment = "1.8.0"
 androidxLifecycle = "2.8.2"
 androidxWork = "2.9.0"
 anvil = "2.5.0-beta09"
 dagger = "2.51.1"
-kotlin = "1.9.24"
+kotlin = "2.0.0"
 kotlinxCoroutines = "1.6.4"
 mavenPublish = "0.29.0"
 truth = "1.4.2"
@@ -22,6 +21,7 @@ androidApplication = { id = "com.android.application", version.ref = "androidGra
 androidLibrary = { id = "com.android.library", version.ref = "androidGradle" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinBinaryCompatibilityValidator = "org.jetbrains.kotlinx.binary-compatibility-validator:0.14.0"
+kotlinComposeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "mavenPublish"}
