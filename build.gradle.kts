@@ -1,5 +1,6 @@
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.tasks.compile.JavaCompile
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -28,8 +29,8 @@ subprojects {
 }
 
 fun KotlinCompile.configureTask() {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_11
 
         val compilerArgs = mutableListOf(
             "-Xassertions=jvm",
@@ -37,7 +38,7 @@ fun KotlinCompile.configureTask() {
             "-opt-in=com.squareup.anvil.annotations.ExperimentalAnvilApi",
         )
         if (project.name != "sample") compilerArgs += "-Xexplicit-api=strict"
-        freeCompilerArgs = freeCompilerArgs + compilerArgs
+        freeCompilerArgs.addAll(compilerArgs)
     }
 }
 

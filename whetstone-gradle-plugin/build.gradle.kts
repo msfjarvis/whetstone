@@ -1,8 +1,8 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.*
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("java-library")
     id("java-gradle-plugin")
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.kotlinKapt)
@@ -16,8 +16,8 @@ kotlin.jvmToolchain(11)
 
 tasks.withType<KotlinCompile>().configureEach {
     dependsOn(generateBuildConfig)
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
-    kotlinOptions.freeCompilerArgs += "-Xexplicit-api=strict"
+    compilerOptions.jvmTarget = JvmTarget.JVM_11
+    compilerOptions.freeCompilerArgs.add("-Xexplicit-api=strict")
 }
 
 gradlePlugin {
