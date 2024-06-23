@@ -2,11 +2,12 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
     alias(libs.plugins.mavenPublish)
-    alias(libs.plugins.kotlinComposeCompiler)
 }
 
 android {
     buildFeatures.compose = true
+    namespace = "com.deliveryhero.whetstone.compose"
+    composeOptions.kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
     namespace = "com.deliveryhero.whetstone.compose"
 }
 
