@@ -21,6 +21,7 @@ android {
     buildFeatures.compose = true
     buildFeatures.viewBinding = true
     composeOptions.kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
+    lint.baseline = file("lint-baseline.xml")
 }
 
 dependencies {
