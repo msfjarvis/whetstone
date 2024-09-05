@@ -1,6 +1,6 @@
 [versions]
 androidGradle = "8.6.0"
-androidxActivity = "1.9.1"
+androidxActivity = "1.9.2"
 androidxAppCompat = "1.7.0"
 androidxCompose = "1.6.8"
 androidxComposeCompiler = "1.5.15"
