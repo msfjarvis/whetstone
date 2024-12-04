@@ -67,7 +67,7 @@ public class WhetstonePlugin : Plugin<Project> {
     }
 
     private companion object {
-        const val ANVIL_PLUGIN_ID = "com.squareup.anvil"
+        const val ANVIL_PLUGIN_ID = "dev.zacsweers.anvil"
         const val WHETSTONE_EXTENSION = "whetstone"
     }
 }
