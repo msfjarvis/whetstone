@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinComposeCompiler)
     alias(libs.plugins.whetstone)
     alias(libs.plugins.kotlinKapt)
 }
