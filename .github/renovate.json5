@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base",
+    "config:recommended",
     ":dependencyDashboard",
     "helpers:pinGitHubActionDigests",
     "github>msfjarvis/shared-workflows//renovate/automerge"
