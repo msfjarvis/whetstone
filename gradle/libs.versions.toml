@@ -12,7 +12,7 @@ anvil = "0.4.1"
 dagger = "2.56.2"
 kotlin = "1.9.25"
 kotlinxCoroutines = "1.6.4"
-mavenPublish = "0.33.0"
+mavenPublish = "0.34.0"
 truth = "1.4.4"
 autoService = "1.1.1"
 
